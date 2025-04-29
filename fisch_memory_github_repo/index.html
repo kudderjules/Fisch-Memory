@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Fisch-Memory</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#001f3f">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Fisch-Memory</h1>
+    <div class="game-board" id="gameBoard"></div>
+    <script src="script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+            .then(() => console.log('Service Worker registriert'))
+            .catch(error => console.error('Fehler beim Registrieren:', error));
+        }
+    </script>
+</body>
+</html>
